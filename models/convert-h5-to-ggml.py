@@ -91,7 +91,7 @@ model = WhisperForConditionalGeneration.from_pretrained(dir_model)
 #code.interact(local=locals())
 
 n_mels = hparams["num_mel_bins"]
-with np.load(os.path.join(dir_whisper, "whisper/assets", "mel_filters.npz")) as f:
+with np.load(os.path.join(dir_whisper, "assets", "mel_filters.npz")) as f:
     filters = torch.from_numpy(f[f"mel_{n_mels}"])
 
 dir_tokenizer = dir_model
